@@ -15,6 +15,7 @@ def sendMessage(chat_id:str, text:str):
     }
     url = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
     response = requests.get(url, params=params)
+    return response.json()
 
 def sendPhoto(chat_id:str,photo:str):
     params = {
